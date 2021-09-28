@@ -4,7 +4,7 @@ import MyComponent from './092-MyComponent';
 
 function App() {
   return (
-    <MyComponent name="프랍이름">칠드런이름</MyComponent>
+    <MyComponent name="프랍이름" favoriteNumber={1}>칠드런이름</MyComponent>
   );
 }
 
