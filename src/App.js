@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import MyComponent from './092-MyComponent';
+// import MyComponent from './092-MyComponent';
+import MyComponent from './102-MyComponent';
 
 function App() {
   return (
