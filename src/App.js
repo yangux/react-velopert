@@ -1,12 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-// import MyComponent from './092-MyComponent';
-import MyComponent from './102-MyComponent';
+import Counter from './104-Counter';
 
-function App() {
-  return (
-    <MyComponent name="프랍이름" favoriteNumber={1}>칠드런이름</MyComponent>
-  );
-}
+const App = () => {
+  return <Counter></Counter>;
+};
 
 export default App;
