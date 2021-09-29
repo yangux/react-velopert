@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './104-Counter';
+import Say from './112-Say';
 
 const App = () => {
-  return <Counter></Counter>;
+  return <Say></Say>;
 };
 
 export default App;
