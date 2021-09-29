@@ -17,11 +17,17 @@ class Counter extends Component {
           onClick={() => {
             // state 값 변경시에는 this.setState 사용
             this.setState({ number: number + 1 });
-            this.setState((prevState, props) => {
-              return {
-                number: prevState.number + 1,
-              };
-            });
+            this.setState(
+              (prevState, props) => {
+                return {
+                  number: prevState.number + 1,
+                };
+              },
+              () => {
+                console.log('방금 setState가 호출되었습니다.');
+                console.log(this.state);
+              }
+            );
           }}
         >
           +1
