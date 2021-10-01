@@ -2,26 +2,29 @@ import React, { Component } from 'react';
 
 class EventPractice extends Component {
   state = {
+    username: '',
     message: '',
   };
 
-  /* 
-    ** 바벨 transform-class-properties 문법 **
-    생성자(constructor) 메서드 없이
-    화살표 함수 형태로 메서드를 정의
-  */
-
   handleChange = (e) => {
     this.setState({
-      message: e.target.value,
+      // ** 객체 안에서 key를 []로 감싸면 참조 값이 key 값으로 사용된다!
+      [e.target.name]: e.target.value,
     });
   };
 
   handleClick = () => {
-    alert(this.state.message);
+    alert(this.state.username + ': ' + this.state.message);
     this.setState({
+      username: '',
       message: '',
     });
+  };
+
+  handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      this.handleClick();
+    }
   };
 
   render() {
@@ -30,10 +33,18 @@ class EventPractice extends Component {
         <h1>이벤트 연습</h1>
         <input
           type="text"
+          name="username"
+          placeholder="사용자명"
+          value={this.state.username}
+          onChange={this.handleChange}
+        />
+        <input
+          type="text"
           name="message"
           placeholder="아무거나 입력해 보세요"
           value={this.state.message}
           onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
         ></input>
         <button onClick={this.handleClick}>확인</button>
       </div>
