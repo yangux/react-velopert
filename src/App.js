@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import EventPractice from './138-EventPractice';
+import ValidationSample from './145-ValidationSample';
 
 const App = () => {
-  return <EventPractice></EventPractice>;
+  return <ValidationSample></ValidationSample>;
 };
 
 export default App;
