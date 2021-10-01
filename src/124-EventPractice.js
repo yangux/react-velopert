@@ -5,25 +5,24 @@ class EventPractice extends Component {
     message: '',
   };
 
-  constructor(props) {
-    super(props);
-    // 함수 호출부가 아닌 컴포넌트 자신을 this로 가리키도록 this 바인딩 해준다s
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
+  /* 
+    ** 바벨 transform-class-properties 문법 **
+    생성자(constructor) 메서드 없이
+    화살표 함수 형태로 메서드를 정의
+  */
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       message: e.target.value,
     });
-  }
+  };
 
-  handleClick() {
+  handleClick = () => {
     alert(this.state.message);
     this.setState({
       message: '',
     });
-  }
+  };
 
   render() {
     return (
