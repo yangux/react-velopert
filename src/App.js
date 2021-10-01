@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import EventPractice from './124-EventPractice';
+import EventPractice from './138-EventPractice';
 
 const App = () => {
   return <EventPractice></EventPractice>;
