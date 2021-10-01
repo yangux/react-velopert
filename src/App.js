@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Say from './112-Say';
+import EventPractice from './124-EventPractice';
 
 const App = () => {
-  return <Say></Say>;
+  return <EventPractice></EventPractice>;
 };
 
 export default App;
